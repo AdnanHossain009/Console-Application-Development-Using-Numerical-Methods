@@ -12,7 +12,7 @@ where:
         <li><b>b</b> is the right-hand side vector.</li>
     </ul>
 
-    <h2>Steps of Gaussian Elimination</h2>
+<h2>Steps of Gaussian Elimination</h2>
 Gaussian elimination works by transforming the matrix <b>A</b> into an upper triangular matrix, where all elements below the main diagonal are zero. This is accomplished by performing a sequence of row operations.
 
 <h2>1. Forward Elimination</h2>
