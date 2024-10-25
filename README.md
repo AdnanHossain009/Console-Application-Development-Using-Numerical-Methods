@@ -303,3 +303,95 @@ Let's consider the function f(x) = x² - 4 and find the root in the interval [0,
         </li>
     </ul>
 Bisection is perhaps the most basic numerical method, but it is at the same time a foundation of other, usually more complex root finding methods.
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>False Position Method</h1>
+The False Position, is a numerical method for finding the roots of a function. It shares features of both the Bisection Method and the Secant Method. It uses two initial guesses, like the Bisection Method, to create an interval; however, as opposed to choosing the midpoint, it uses a linear interpolation in order to estimate the root. This often results in faster convergence than does the Bisection Method. 
+
+The method is based on the assumption that the root lies between two points a and b, where f(a) and f(b) have opposite signs. The formula for finding the root is derived from the secant line through the points ((a, f(a)) and ((b, f(b)):
+<div class="equation">
+        x<sub>r</sub> = b -
+        <frac>f(b)(a - b)</frac> /
+        <frac>f(a) - f(b)</frac>
+    </div>
+    <p>where:</p>
+    <ul>
+        <li><i>x<sub>r</sub></i> is the estimated root.</li>
+• Current interval endpoints, <i>a</i> and <i>b</i>.
+ • Values of <i>f(a)</i> and <i>f(b)</i> at the current interval endpoints.
+ </ul>
+<h2>Steps of the False Position Method</h2>
+
+<ol>
+ • <b>Choose Initial Points</b>:
+<p>Choose two starting points, <i>a</i> and <i>b</i>, such that <i>f(a) &cdot; f(b) &lt; 0</i>. This ensures that there is at least one root within the interval <i>[a, b]</i>.</p>
+        </li>
+        <li><b>Calculate the Root Estimate</b>:
+<p>Use the False Position formula to find an approximate value of <i>x<sub>r</sub></i>:</p>
+            <div class="equation">
+                x<sub>r</sub> = b -
+<frac>f(b)(a - b)</frac> /
+                <frac>f(a) - f(b)</frac>
+            </div>
+        </li>
+        <li><b>Evaluate the Function</b>:
+<p>Find the value of function at \(x_r\): \(f(x_r)\) </p>
+        </li>
+        <li><b>Interval Update</b>: 
+            <p>Based on the sign of \(f(x_r)\), do an appropriate update to the interval:
+<ul>
+                <li>If <i>f(a) &cdot; f(x<sub>r</sub>) &lt; 0</i>, then the root lies in <i>[a, x<sub>r</sub>]</i>. Set <i>b = x<sub>r</sub></i>.</li>
+• If f(b) · f(xr) < 0, then the root lies in [xr, b]. Set a = xr.
+                </ul>
+            </li>
+            <li><b>Repeat</b>:
+<p>Repeat steps 2 through 4 until the absolute difference between successive estimates is less than a given tolerance <i>ε</i>, or until the function value at the root estimate is sufficiently close to zero.</p>
+        </li>
+    </ol>
+    <h2>Example</h2>
+
+Now let's find the root for the function f(x) = x² - 4.
+    <ol>
+        <li><b>Initial Points</b>: Let a = 0 and b = 5 (since f(0) < 0 and f(5) > 0).</li>
+        <li><b>First Iteration</b>:
+            <ul>
+<li>Compute: <i>f(a) = f(0) = 0² - 4 = -4</i>.</li>
+ <li>Compute: <i>f(b) = f(5) = 5² - 4 = 21</i>.</li>
+<li>Calculate the estimate for root,
+                    <div class="equation">
+                        x<sub>r</sub>=5-
+<frac>21(0 - 5)</frac> /
+                        <frac>-4 - 21</frac> = 5 -
+<frac>-105>-25=5-4.2=0.8</frac>
+                    </div>
+                </li>
+</ul>
+        </li>
+        <li><b>Function Evaluation</b>:
+            <p>Calculate <i>f(0.8) = (0.8)² - 4 = -3.36</i>.</p>
+        </li>
+        <li><b>Interval Update</b>:
+Since <i>f(0) &cdot; f(0.8) &lt; 0</i>, we set <i>b = 0.8</i>.</p>
+        </li>
+        <li><b>Repeat</b>:
+<p>Take <i>a = 0</i> and <i>b = 0.8</i> for the next iteration and repeat the process until the desired accuracy is achieved.</p>
+        </li>
+    </ol>
+<h2>Advantages and Limitations</h2>
+    <ul>
+        <li><b>Advantages</b}: 
+            <ul>
+                <li>The False Position Method has much faster convergence than the Bisection Method because it employs a better approximation of the root.
+<li>It is simple to implement and does not require derivative information.</li>
+            </ul>
+        </li>
+        <li><b>Limitations</b>: 
+            <ul>
+• It can be slower than other methods, such as Newton's method, when applied to functions that are not well-behaved.
+<li>If the function is not sufficiently continuous or if the initial guesses are not chosen appropriately, convergence may be slow or may not occur.</li>
+            </ul>
+        </li>
+    </ul>
+
+The false position method represents a very useful tool in root finding, especially for continuous functions whose function behavior could be quite easy to analyze.
