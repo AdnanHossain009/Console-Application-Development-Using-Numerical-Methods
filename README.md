@@ -39,11 +39,11 @@ This process is then repeated for each column, creating zeros below each success
 For instance, if the following system has been transformed:
             
 <div class="equation">
-    <span>a<sub>nn</sub>x<sub>n</sub> = b'<sub>n</sub></span>
-    <span>a<sub>(n-1)(n-1)</sub>x<sub>(n-1)</sub> + a<sub>(n-1)n</sub>x<sub>n</sub> = b'<sub>(n-1)</sub></span>
-    <span>&#8942;</span> <!-- Vertical dots (ellipsis) -->
+    <span>a<sub>nn</sub>x<sub>n</sub> = b<sub>n</sub></span>
+    <span>a<sub>(n-1)(n-1)</sub>x<sub>(n-1)</sub> + a<sub>(n-1)n</sub>x<sub>n</sub> = b<sub>(n-1)</sub></span>
+    
 </div>
-a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> x<sub>n</sub> = b'<sub>1</sub>
+a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> x<sub>n</sub> = b<sub>1</sub>
         </pre>
 </div>
 <p>we solve for <i>x<sub>n</sub></i> in the last equation, then substitute back to find <i>x<sub>n-1</sub></i>, <i>x<sub>n-2</sub></i>, ., <i>x<sub>1</sub></i>.</p>
@@ -60,7 +60,7 @@ a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> 
        </pre>
     </div>
 <p><b>1. Forward Elimination:</b> This system is to be reduced to an upper triangular form using row operations.</p>
-    <p><b>2. Back Substitution:</b> Solve for <i>z</i> from the last equation, then by substitution solve for <i>y</i>, and finally <i>x</i>.</p>
+    <p><b>2. Back Substitution:</b> Solve for <i>e</i> from the last equation, then by substitution solve for <i>d</i>,then by substitution and solve <i>c</i>,then by substitution and solve <i>b</i> and finally <i>a</i>.</p>
 
 <h2>Advantages and Limitations</h2>
 
@@ -70,7 +70,7 @@ a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> 
 </ul></body>
 
 <h1>4. Gauss-Jordan Elimination Method</h1>
-Gauss-Jordan Elimination is an extended form of Gaussian elimination for the solution of systems of linear equations. sSo after eliminating the variables above the pivot in the "Gauss-Jordan elimination" we eliminate the variables below each pivot to create a thoroughly simplified matrix from which one can read directly from the matrix.
+Gauss-Jordan Elimination is an extended form of Gaussian elimination for the solution of systems of linear equations.So after eliminating the variables above the pivot in the "Gauss-Jordan elimination" we eliminate the variables below each pivot to create a thoroughly simplified matrix from which one can read directly from the matrix.
 
 Steps of Gauss-Jordan Elimination
 Gauss-Jordan elimination consists of two major steps: <b>forward elimination</b> and <b>backward elimination</b> in order to have zeros elsewhere in each column that contains a leading entry.
@@ -125,23 +125,26 @@ After forward elimination, further simplification to get a reduced row echelon f
 <h2>Pros and Cons</h2>
 <ul>
 <li><b>Advantages</b>: Gauss-Jordan elimination reduces a matrix to its most simplified form, from which the solutions can be directly read without any further substitution. This makes it quicker and more systematic for solving systems compared to Gauss' elimination methods.
+        <li><b>Disadvantages</b>: Gaussian elimination has several drawbacks: it can be numerically unstable, has high computational complexity, requires extra memory, often needs pivoting for stability, and is limited to linear systems. It may also lose the original matrix structure and lacks flexibility for specialized problems.
 </ul>
 
 
-<h1>11. Matrix Inversion</h1>
-<p>
-Matrix inversion is among the basic operations in linear algebra and is defined as the calculation of a matrix, $A^{-1}, known as the inverse of matrix A, such that its multiplication with A results in the identity matrix I. The identity matrix is a square matrix with 1s on the diagonal and zeroes elsewhere.
-</p>
+<body>
+    <h1>Matrix Inversion</h1>
+Matrix inversion is among the basic operations in linear algebra and is defined as the calculation of a matrix $A^{-1}$ , known as the inverse of matrix A, such that its multiplication with A results in the identity matrix I. The identity matrix is a square matrix with 1s on the diagonal and zeroes elsewhere.
+
+Definition
+Given a square matrix A of order n, its inverse $A^{-1}$ fulfills the following requirement: $AA^{-1} = A^{-1} A = I$ where I is the n × n identity matrix. 
 
 <h3>Conditions for Invertibility</h3>
 Not all matrices possess inverses. A square matrix A is said to be invertible (or non-singular) if:
 <ol>
-<li><b></b>Determinant Condition</b>: The determinant of A muzt be non-zero thus det(A) ≠ 0</li>
+<li><b>Determinant Condition</b>: The determinant of A must be non-zero thus det(A) ≠ 0</li>
 <li><b>Square Matrix</b>: The matrix should be square in nature, i.e., it must have the same number of rows as well as columns.
 </ol>
 <p"When the value of determinant is zero, then the matrix is said to be singular and its inverse does not exist.
 
-<p>Gauss-Jordan Elimination:</p>
+<p><h2>Gauss-Jordan Elimination:</h2></p>
 <p>This method involves augmenting the matrix <i>A</i> with the identity matrix <i>I</i> and applying row operations to transform <i>A</i> into <i>I</i>. The augmented part will then become <i>A<sup>-1</sup></i>.</p>
 
 <h2>Example</h2>
@@ -156,11 +159,15 @@ Not all matrices possess inverses. A square matrix A is said to be invertible (o
        </pre>
 </div>
 <p>Using the above system first forming a 5 X 5 matrix and then using the Gauss Jordan Elimination to solve detemine the inverse matrix</p>
-Limitations
+<h2>Limitations:</h2>
 <ul>
 <li><b>Computational Complexity</b>: The inverse of large-size matrices involves heavy computational complexity and can lead to numerical instability.</li>
 <li><b>Singular Matrices</b>: If a matrix is singular, then it cannot be used in those types of calculations which require its inverse.</li>
-<ul>
+       
+<h2>Conclusion</h2>
+<p>Matrix inversion is a fundamental concept in linear algebra and finds many applications in mathematics, engineering, computer science, and more. Finding and utilizing matrix inverses is key to problem-solving involving both linear systems and transformations.
+</p>
+</u>
 
     
 <h1>6. Bisection Method</h1>
