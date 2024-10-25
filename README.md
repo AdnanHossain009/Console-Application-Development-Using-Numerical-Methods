@@ -1,4 +1,4 @@
-# Console-Application-Development-Using-Numerical-Methods
+# Console Application Development Using Numerical Methods
 
 <body>
 
@@ -21,7 +21,7 @@
 <h2>Video Presentation</h2>
     <p>A 2-minute video demonstrating the functionality of this application can be accessed <a href="your-video-link-here">here</a>.</p>
 
-<h2>Here is the full explanaton of the algorithm being used in each method and also detailed explanation is also included.</h2>
+<h2>Here full explanation of the algorithm being used in each method and detailed explanation is included.</h2>
 
 <h1>1. Jacobi Iterative Method</h1>
     <p>The Jacobi method is an iterative algorithm to solve a system of linear equations of the form:</p>
