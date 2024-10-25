@@ -234,3 +234,72 @@ Limitations
 <ul>
 <h2>Conclusion</h2>
     <p>Matrix inversion is a fundamental concept in linear algebra and finds many applications in mathematics, engineering, computer science, and more. Finding and utilizing matrix inverses is key to problem-solving involving both linear systems and transformations.
+
+    <!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Bisection Method</h1>
+<p>The Bisection method is a straightforward and stable numerical method for computing the roots of a continuous function.    It works especially fine when a function is continuous on a closed interval and the root is guaranteed to exist between two points in that interval. The method makes use of the so-called Intermediate Value Theorem that says: if a function changes the sign over an interval, then it has at least one root in that interval.</p>     <h2>Steps of the Bisection Method</h2>
+
+    <ol>
+<li><b>Selection of Starting Points</b>:
+            <p>There should be two starting points, <i>a</i> and <i>b</i>, such that the function values at both points satisfy <i>f(a) · f(b) < 0</i>. This will mean that there exists at least one root within the interval <i>[a, b]</i>.</p>
+        </li>
+<li><b>Calculate Midpoint</b>: 
+            <p>Compute the midpoint <i>c</i> of the interval:</p>
+            <div class="equation">c = (a + b) / 2</div>
+        </li>
+        <li><b>Evaluate Function at Midpoint</b>:
+Check the value of the function at the midpoint: f(c).
+        </li>
+        <li><b>Check for Root</b>:
+            <p>If f(c) = 0, then c is the root, and the method terminates.
+If <i>f(c) ≠ 0</i>, determine for which subinterval(s) to continue:
+            <ul>
+                <li>If <i>f(a) · f(c) < 0</i>, then the root is in <i>[a, c]</i>. Let <i>b = c</i>.</li>
+• <i>f(c) · f(b) < 0</i>>, then the root lies in <i>[c, b]</i>. Set <i>a = c</i> .
+            </ul>
+        </li>
+        <li><b>Repeat</b>:
+<p>Repeat steps 2 to 4 until the desired accuracy is obtained. In general this is when the width of the interval |b - a| is less than a given tolerance ε, or, alternatively, when f is sufficiently close to zero.</p>
+        </li>
+    </ol>
+    <h2>Example</h2>
+
+Let's consider the function f(x) = x² - 4 and find the root in the interval [0, 5].
+    <ol>
+        <li><strong>Initial Points</strong>: a = 0, b = 5 since f(0) < 0 and f(5) > 0.</li>
+        <li><strong>First Iteration</strong>:
+<ul>
+                <li>Compute <i>c = (0 + 5) / 2 = 2.5</i>.</li>
+                <li>Compute <i>f(2.5) = (2.5)² - 4 = -1.75</i>.</li>
+<li>Since <i>f(0) · f(2.5) < 0</i>, update <i>b = 2.5</i>.</li>
+            </ul>
+        </li>
+        <li><b>Second Iteration</b>:
+            <ul>
+• Compute c = (0 + 2.5)/2 = 1.25.
+ • Find f(1.25) = (1.25)² - 4 = -3.4375.
+• Update b = 1.25 (since f(0) · f(1.25) < 0).
+            </ul>
+        </li>
+        <li><b>Following Iterations</b>:
+<p>Continue iterations until the interval is small enough, thereby converging to the root <i>x = 2</i>.</p>
+        </li>
+    </ol>
+    <h2>Advantages and Limitations</h2>
+
+    <ul>
+        <li><b>Advantages</b>:
+• The Bisection Method is certain to converge provided the initial interval has been chosen correctly. • It has a very simple formulation and hence easy to understand.
+•	 It can be applied to any continuous function.
+            </ul>
+        </li>
+        <li><b>Limitations</b>: 
+            <ul>
+• The method might be slow to converge, especially if the function has roots close to each other. • It applies only to functions that change sign over the interval.
+• The method needs initial guesses that bracket the root.
+            </ul>
+        </li>
+    </ul>
+Bisection is perhaps the most basic numerical method, but it is at the same time a foundation of other, usually more complex root finding methods.
