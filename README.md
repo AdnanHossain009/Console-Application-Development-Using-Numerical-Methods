@@ -1,19 +1,4 @@
 # Console-Application-Development-Using-Numerical-Methods
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaussian Elimination Method</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-<style>
-        .equation { font-style: italic; margin: 10px 0; }
-        ul { margin-top: 0; }
-    </style>
-</head>
 <body>
     <h1>Gaussian Elimination Method</h1>
 Gaussian elimination is a method used in solving systems of linear equations; it converts any given arbitrary system into one whose solution is immediately obvious. It works in two phases: <b>forward elimination</b> and <b>back substitution</b>.
