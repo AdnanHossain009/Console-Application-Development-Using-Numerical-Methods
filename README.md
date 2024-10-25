@@ -415,3 +415,100 @@ x<sub>2</sub> = 3 - 5 &cdot;
     </ul>
 
     The Secant Method is really powerful for finding roots of functions, and particularly useful in those cases when one does not have any derivative information. For this reason, it serves as a kind of bridge between more simple methods, such as the Bisection method, and more sophisticated techniques.
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Newton-Raphson Method</h1>
+The Newton-Raphson Method is perhaps the most effective numerical method for finding approximations to the roots or zeros of a real-valued function. In its iterations, it utilizes the tangent concept in order to converge to a root. It sees great application for functions that are differentiable and whose derivative can be calculated out easily.
+The Newton-Raphson formula follows directly from the principle of linear approximation. Given a function f(x) and its derivative f′(x), with an initial approximation x0 to the root, repeatedly replace the test value by x n+1 = x n -
+<frac>f(x<sub>n</sub>)</frac> /
+        <frac>f'(x<sub>n</sub>)</frac>
+    </div>
+    <p>where:</p>
+    <ul>
+        <li><i>x<sub>n</sub></i> is the current approximation.</li>
+        <li><i>f(x<sub>n</sub>)</i> is the value of the function at <i>x<sub>n</sub></i>.</li>
+• \(f'(x_n)\) is the value of the derivative at \(x_n\).
+</ul>
+
+### Steps of the Newton-Raphson Method
+<ol>
+ • <b>Choose an Initial Guess</b>:
+ The first step is to select an initial guess \(x_0\) that is reasonably close to the root.
+</li>
+        <li><b>Evaluate the Function and Its Derivative</b>:
+            <p>Calculate <i>f(x<sub>0</sub>)</i> and <i>f'(x<sub>0</sub>)</i>.</p>
+        </li>
+        <li><b>Update the Estimate</b>:
+<p>By the Newton-Raphson formula, find the next approximation to the root, <i>x<sub>1</sub></i>:</p>
+            <div class="equation">
+                x<sub>1</sub> = x<sub>0</sub> -
+<div class="d-flex flex-justify-center">
+                <frac>f(x<sub>0</sub>)</frac> /
+                <frac>f'(x<sub>0</sub>)</frac>
+            </div>
+        </li>
+        <li><b>Check for Convergence</b>:
+Check if the approximation converges by checking that the absolute difference of successive approximations is smaller than a given tolerance ε: 
+            <div class="equation">
+                |x<sub>n+1</sub> - x<sub>n</sub>| &lt; ε
+OR check if <i>|f(x<sub>n+1</sub>)| < ε</i>.</p>
+        </li>
+        <li><b>Iterate</b>:
+<p>If convergence criteria are not met, set <i>x<sub>0</sub> = x<sub>1</sub></i> and repeat steps 2 to 4.</p>
+        </li>
+    </ol>
+
+    <h2>Example</h2>
+    <p>Consider the function <i>f(x) = x² - 2</i>. We want to find the root (the square root of 2).
+<ol>
+        <li><b>Choose Initial Guess</b>: Let <i>x<sub>0</sub> = 1</i>.</li>
+        <li><b>Evaluate the Function and Its Derivative</b>:
+            <ul>
+                <li><i>f(1) = 1² - 2 = -1</i></li>
+• f′(1) = 2 · 1 = 2
+            </ul>
+        </li>
+        <li><b>Update the Estimate</b>:
+            <p>Compute <i>x<sub>1</sub></i>:</p>
+<div class="equation">
+                x<sub>1</sub> = 1 -
+                <frac>-1</frac> /
+<frac>2</frac> = 1.5
+            </div>
+        </li>
+        <li><b>Check for Convergence</b>:
+            <ul>
+<li>Compute $$f(1.5) = (1.5)^2 - 2 = 0.25$$</li>
+                <li>Compute $$f'(1.5) = 2 \cdot 1.5 = 3$$</li>
+                <li>Compute $$x_2:
+Div class="equation">
+                        x2 = 1.5 -
+<frac>0.25</frac> /
+                        <frac>3</frac> &≈ 1.41667
+</div>
+                </li>
+            </ul>
+        </li>
+        <li><b>Repeat</b>:
+<p>Repeat this process until desired accuracy is reached.</p>
+        </li>
+    </ol>
+<h2>Advantages and Limitations</h2>
+    <ul>
+        <li><b>Advantages</b>: 
+            <ul>
+• The Newton-Raphson Method converges very fast for an initial guess close enough to the exact root. Fewer numbers of iterations are required as compared to other methods, such as Bisection or Secant.
+• It can be employed in finding multiple roots, and it can be applied to a wide range of functions. 
+            </ul>
+        </li>
+        <li><b>Limitations:</b>
+<ul>
+                <li>If the initial guess is not sufficiently close to the root, or if the function has discontinuities there, or is not differentiable there, then the method might fail to converge.
+• The method may be unstable if the derivative f′(xn) is zero or near zero; it could also result in division by zero.
+• It may be converge to a local extrema rather than a root, especially for non-monotonic functions.
+            </ul>
+        </li>
+    </ul>
+
+The Newton-Raphson Method has become a significant avenue for numerical equation solutions, finding wide applications in several areas, including engineering, physics, and computer science.
