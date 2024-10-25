@@ -3,7 +3,14 @@
 <body>
 
 <p>This project, completed by our group of three members, presents a console application that implements various numerical methods for solving mathematical and engineering problems. Each algorithm is structured to be modular and allows for interactive user input.</p>
+
+<h2>Group Members </h2>
+<ul>
+    <li>Esha Saha</li>
+    <li>Adnan Hossain Siraz</li>
+    <li>Torikul Islam</li>
     
+</ul>
 <h2>Objective</h2>
     <p>The main goal of this project is to collaboratively develop a console application that applies different numerical methods to solve systems of linear and non-linear equations, differential equations, and matrix inversion. The project highlights our understanding of numerical algorithms and our skills in programming and collaborative development.</p>
 
