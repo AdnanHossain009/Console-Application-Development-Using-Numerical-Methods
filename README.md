@@ -162,12 +162,10 @@ Not all matrices possess inverses. A square matrix A is said to be invertible (o
 <h2>Limitations:</h2>
 <ul>
 <li><b>Computational Complexity</b>: The inverse of large-size matrices involves heavy computational complexity and can lead to numerical instability.</li>
-<li><b>Singular Matrices</b>: If a matrix is singular, then it cannot be used in those types of calculations which require its inverse.</li>
-       
-<h2>Conclusion</h2>
+<li><b>Singular Matrices</b>: If a matrix is singular, then it cannot be used in those types of calculations which require its inverse.</li></ul>    
+<h2>Conclusion:</h2>
 <p>Matrix inversion is a fundamental concept in linear algebra and finds many applications in mathematics, engineering, computer science, and more. Finding and utilizing matrix inverses is key to problem-solving involving both linear systems and transformations.
 </p>
-</u>
 
     
 <h1>6. Bisection Method</h1>
