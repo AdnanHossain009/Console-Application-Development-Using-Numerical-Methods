@@ -320,3 +320,98 @@ Since <i>f(0) &cdot; f(0.8) &lt; 0</i>, we set <i>b = 0.8</i>.</p>
     </ul>
 
 The false position method represents a very useful tool in root finding, especially for continuous functions whose function behavior could be quite easy to analyze.
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Secant Method</h1>
+The Secant Method is a technique to find a root of a function numerically. Unlike the Bisection Method, which takes two initial points by creating intervals, the Secant Method approximates the root by taking two initial guesses and then creating a secant line between them. This is an iterative technique that, under appropriate conditions, converges faster than the Bisection Method.
+
+<h2>How the Secant Method Works</h2>
+    <p>The Secant Method uses the formula below and iteratively converges to a root:</p>
+    <div class="equation">
+        x<sub>n+1</sub> = x<sub>n</sub> - f(x<sub>n</sub>) &cdot; 
+        <frac>x<sub>n</sub> - x<sub>n-1</sub></frac> / 
+        <frac>f(x<sub>n</sub>) - f(x<sub>n-1</sub>)</frac>
+</div>
+    <p>where:</p>
+    <ul>
+        <li><i>x<sub>n</sub></i> and <i>x<sub>n-1</sub></i> are the current and previous approximations of the root, respectively.</li>
+        <li><i>f(x)</i> is the function for which we want to find the root.</li>
+    </ul>
+
+    <h2>Steps of the Secant Method</h2>
+    <ol>
+<li><b>Choose Initial Guesses</b>: 
+            <p>Pick two initial guesses <i>x<sub>0</sub></i> and <i>x<sub>1</sub></i> such that <i>f(x<sub>0</sub>)</i> and <i>f(x<sub>1</sub>)</i> are not equal to zero.</p>
+        </li>
+        <li><b>Iterate</b>:
+<p>Apply the Secant Method formula to find the next approximation \(x_2\): </p>
+            <div class="equation">
+                x<sub>2</sub> = x<sub>1</sub> - f(x<sub>1</sub>) &cdot;
+<div class="d-flex justify-content-center">
+            <frac>x<sub>1</sub> - x<sub>0</sub></frac> /
+                <frac>f(x<sub>1</sub>) - f(x<sub>0</sub>)</frac>
+            </div>
+<p>Refresh previous values: make <i>x<sub>0</sub> = x<sub>1</sub></i> and <i>x<sub>1</sub> = x<sub>2</sub></i>.</p>
+        </li>
+        <li><b>Convergence Check</b>:</
+Iterate repeatedly until the absolute difference between successive approximations is less than a given tolerance :
+            <div class="equation">|x<sub>n+1</sub> - x<sub>n</sub>| < ε</div>
+            <p>Alternatively, terminate if Notice that it is not necessary for a zero of the function to exist at the initial point x0.
+</li>
+    </ol>
+
+    <h2>Example</h2>
+    <p>Consider the function <i>f(x) = x² - 4</i>. We want to find the root.</p>
+    <ol>
+        <li><b>Initial Guesses</b>: Let <i>x<sub>0</sub> = 1</i> and <i>x<sub>1</sub> = 3</i>.</li>
+        <li><b>First Iteration</b>:
+<ul>
+                <li>Calculate <i>f(x<sub>0</sub>) = f(1) = 1² - 4 = -3</i>.</li>
+                <li>Calculate <i>f(x<sub>1</sub>) = f(3) = 3² - 4 = 5</i>.</li>
+<li>Employ the Secant Method formula:
+                    <div class="equation">
+x<sub>2</sub> = 3 - 5 &cdot; 
+                        <frac>3 - 1</frac> /
+<frac>5 - (-3)</frac> = 3 - 5 ⋅ 0.25 = 1.75
+                    </div>
+</li>
+            </ul>
+        </li>
+        <li><b>Second Iteration</b>:
+            <ul>
+<li>Iteration: x0=3, x1=1.75
+             </li>
+                <li>Calculate f(1.75) =(1.75)2−4≈−1.9375
+             </li>
+                <li>Again using the formula:
+<div class="equation">
+                x_{3} = 1.75 - (-1.9375) ·
+<frac>1.75 - 3</frac> / 
+                         <frac>-1.9375 - 5</frac> ≈ 1.75 + 0.64 ≈ 2.39
+</div>
+                </li>
+            </ul>
+        </li>
+        <li><b>Continue Iterating</b>:
+<p>Repeat this process until desired accuracy is achieved.</p>
+        </li>
+    </ol>
+<h2>Advantages and Limitations</h2>
+    <ul>
+        <li><b>Advantages</b>: 
+            <ul>
+                <li>The Secant Method is generally faster compared to the Bisection Method.</li>
+• It does not require that the function be evaluated at the midpoint; this can be computationally sparing in some instances.
+            </ul>
+        </li>
+        <li><b>Limitations</b>:
+<ul>
+                <li>The method may not converge if the initial guesses are too far from the actual root.</li>
+• It relies on the function values at the initial guesses to be different, or else the method will fail.
+• The Secant Method is not as surefire as methods employing derivatives such as Newton's method for functions that are ill-behaved.
+</ul>
+        </li>
+    </ul>
+
+    The Secant Method is really powerful for finding roots of functions, and particularly useful in those cases when one does not have any derivative information. For this reason, it serves as a kind of bridge between more simple methods, such as the Bisection method, and more sophisticated techniques.
