@@ -81,20 +81,7 @@ a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> 
 <ul>
   <li><b>Advantages</b>: Gaussian elimination is a systematic method that works for any invertible matrix.</li>
 • <b>Limitation</b>: The method can be computationally expensive for large matrices. Gaussian elimination may also be prone to numerical instability, in particular if the magnitudes of the pivot elements are close to zero.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gauss-Jordan Elimination Method</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-<style>
-        .equation { font-style: italic; margin: 10px 0; }
-        ul { margin-top: 0; }
-    </style></head>
+
 <body>
     <h1>Gauss-Jordan Elimination Method</h1>
 Gauss-Jordan Elimination Gauss-Jordan elimination is an extended form of Gaussian elimination for the solution of systems of linear equations. In this process, a matrix is brought to its RREF where every leading entry must be 1, and all entries in any column containing a leading entry must be zero everywhere else. Gauss-Jordan elimination eliminates the variables above and below each pivot to create a thoroughly simplified matrix from which one can read directly from the matrix.
@@ -157,22 +144,7 @@ a. <b>Eliminate Above</b>: For each pivot, clear the entry above by subtracting 
 </ul>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix Inversion</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-h3 { color: #666; }
-        .equation { font-style: italic; margin: 10px 0; }
-        ul { margin-top: 0; }
-        ol { margin-top: 0; }
-    </style>
-</head>
+
 <body>
     <h1>Matrix Inversion</h1>
 Matrix inversion is among the basic operations in linear algebra and is defined as the calculation of a matrix, A-1, known as the inverse of matrix A, such that its multiplication with A results in the identity matrix I. The identity matrix is a square matrix with 1s on the diagonal and zeroes elsewhere.
