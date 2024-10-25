@@ -172,3 +172,108 @@ a. <b>Eliminate Above</b>: For each pivot, clear the entry above by subtracting 
 </ul>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Inversion</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1 { color: #333; }
+        h2 { color: #555; }
+h3 { color: #666; }
+        .equation { font-style: italic; margin: 10px 0; }
+        ul { margin-top: 0; }
+        ol { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Matrix Inversion</h1>
+Matrix inversion is among the basic operations in linear algebra and is defined as the calculation of a matrix, A-1, known as the inverse of matrix A, such that its multiplication with A results in the identity matrix I. The identity matrix is a square matrix with 1s on the diagonal and zeroes elsewhere.
+
+Definition
+Given a square matrix A of order n, its inverse A-1 fulfills the following requirement: $AA^{-1} = A^{-1} A = I$ where I is the n × n identity matrix. Conditions for Invertibility
+Not all matrices possess inverses. A square matrix A is said to be invertible (or non-singular) if:
+    Determinant Condition: The determinant of A is non-zero:
+        The equation is det(A) ≠ 0
+</div>
+</li>
+<li><b>Square Matrix</b>: The matrix should be square in nature, i.e., it must have the same number of rows as well as columns.
+</li>
+</ul>
+<p"When the value of determinant is zero, then the matrix is said to be singular and its inverse does not exist.
+
+Methods for Finding the Inverse
+    There are several methods for calculating the inverse of a matrix:
+    Gauss-Jordan Elimination:
+<p>This method involves augmenting the matrix <i>A</i> with the identity matrix <i>I</i> and applying row operations to transform <i>A</i> into <i>I</i>. The augmented part will then become <i>A<sup>-1</sup></i>.</p>
+        </li>
+        <li><b>Adjoint Method</b>:
+The inverse can also be calculated with the following formula: 
+            <div class="equation">
+                A<sup>-1</sup> = <span style="text-decoration: overline;">1</span> det(A) · adj(A)
+            </div>
+where is the adjugate (or adjoint) of. The adjugate is obtained by taking the transpose of the cofactor matrix.
+        </li>
+        <li><b>Using the Matrix of Minors</b>:
+<p>The direct determinant calculation of the matrix and minors, cofactors, and adjugate. This approach is computationally expensive for large matrices.</p>
+        </li>
+        <li><b>LU Decomposition:</b>
+Decompose the matrix A into a lower triangular matrix L and an upper triangular matrix U, such that A = LU. Find the inverses of L and U separately. Multiply them to obtain A-1.  
+
+        </li>
+    </ol>
+
+    <h2>Example</h2>
+Consider the following matrix: 
+    $A = \left(\begin{array}{cc} 
+    4 & 7 \\ 
+    2 & 6 
+    \end{array}\right)$
+    <ol>
+    <li><b>Find the Determinant</b>:
+<div class="equation">
+                det(A) = (4)(6) - (7)(2) = 24 - 14 = 10
+            </div>
+        </li>
+• <b>Find the Adjugate</b>:
+            <div class="equation">
+                adj(A) = \begin{pmatrix}
+                6 & -7
+-2 & 4
+                \\end{pmatrix}
+            </div>
+        </li>
+        <li><b>Find the Inverse</b>:
+<div class="equation">
+                A<sup>-1</sup> = <span style="text-decoration: overline;">1</span> 10 · \\\\begin{pmatrix}
+                6 & -7 \\\\\"]
+-2 & 4
+                \\end{pmatrix} = \\begin{pmatrix}
+                0.6 & -0.7 \\
+-0.2 & 0.4
+                \\end{pmatrix}
+            </div>
+        </li>
+    </ol>
+<h2>Matrix Inversion Applications</h2>
+    <p>There are several applications of matrix inversion in various fields, such as: </p>
+    <ul>
+        <li><b>Solution of Linear Systems</b>: In the case of systems of linear equations, if <i>A</i> is a matrix containing the coefficients of the variables involved, the solution <i>A<sup>-1</sup>b</i> can be determined using the formula below:
+            <div class="equation">
+x = A<sup>-1</sup>b
+            </div>
+            <p>where <i>b</i> is the vector of constants.
+• Computer Graphics: In three-dimensional graphics, it works out the inverses for matrix purposes to perform transformations and find the position of objects.
+• Control Systems: In control theory, the process of inverting a matrix is highly instrumental in systems analysis and also in controller design.
+• Statistics: In multivariate statistics, the inverse of the covariance matrix features in many analyses.
+</ul>
+
+Limitations
+<ul>
+<li><b>Computational Complexity</b>: The inverse of large-size matrices involves heavy computational complexity and can lead to numerical instability.
+<b>Singular Matrices</b>: If a matrix is singular, then it cannot be used in those types of calculations which require its inverse.
+<ul>
+<h2>Conclusion</h2>
+    <p>Matrix inversion is a fundamental concept in linear algebra and finds many applications in mathematics, engineering, computer science, and more. Finding and utilizing matrix inverses is key to problem-solving involving both linear systems and transformations.
