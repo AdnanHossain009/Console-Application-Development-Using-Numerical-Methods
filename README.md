@@ -30,7 +30,7 @@ where:
     </ol>
 This process is then repeated for each column, creating zeros below each successive pivot. When all the rows have been used, the matrix will have become upper triangular.
 
-    <h2>2. Back Substitution</h2>
+<h2>2. Back Substitution</h2>
     <p>Once <b>A</b> has been put into upper triangular form, the unknowns can be solved from the last row upwards.
 <ol>
         <li><b>Solve the last variable</b>: Now, the last equation has only one unknown that can be solved directly.
