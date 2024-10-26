@@ -12,23 +12,23 @@
     
 </ul>
 <h2>Objective</h2>
-    <p>The main goal of this project is to collaboratively develop a console application that applies different numerical methods to solve systems of linear and non-linear equations, differential equations, and matrix inversion. The project highlights our understanding of numerical algorithms and our skills in programming and collaborative development.</p>
+    <p>The aim of this project is to design the console application collaboratively which will feature several numerical methods that can solve both linear and non-linear equations systems, differential equations, and matrix inversion. The project emphasizes our oral comprehension of numerical algorithms, our programming and joint development competencies</p>
 
 <h2>Features</h2>
     <ul>
-        <li><strong>Solution of Linear Equations:</strong> Includes Jacobi, Gauss-Seidel, Gauss elimination, Gauss-Jordan elimination, and LU factorization methods.</li>
-        <li><strong>Solution of Non-linear Equations:</strong> Includes the bisection method, false position method, secant method, and Newton-Raphson method.</li>
-        <li><strong>Solution of Differential Equations:</strong> Uses the Runge-Kutta method.</li>
-        <li><strong>Matrix Inversion:</strong> Provides a matrix inversion solution through numerical computation.</li>
+        <li><b>Solution of Linear Equations:</b></li> Jacobi, Gauss-Seidel, Gauss elimination, Gauss-Jordan elimination, and LU factorization methods.
+        <li><b>Solution of Non-linear Equations:</b></li> Bisection method, False position method, Secant method and Newton-Raphson method.
+        <li><b>Solution of Differential Equations:</b></li> Uses the Runge-Kutta(RK) method.
+        <li><b>Matrix Inversion:</b></li> Provides a matrix inversion solution through numerical computation.
     </ul>
 
 <h2>Repository Structure</h2>
-    <p>The code for each method is organized within individual modules, allowing for flexibility and ease of testing. A README section explains each method, the algorithm behind it, and sample code output. The project also includes a demonstration video linked below.</p>
+    <p>The code of each method is contained in its own module which allows for some flexibility as well as easier testing. In the README section, you will be given insights on methods used and the algorithm for each of them. There is also a demonstration video which is included in this project which is linked below.</p>
     
 <h2>Video Presentation</h2>
-    <p>A 2-minute video demonstrating the functionality of this application can be accessed <a href="your-video-link-here">here</a>.</p>
+    <p>A 2-minute video demonstrating the functionality of this application can be accessed <a href="https://drive.google.com/drive/folders/11_lmAWT6in9oUkwgakqjtj8WanOR72vs">here</a>.</p>
 
-<h2>Here full explanation of the algorithm being used in each method and detailed explanation is included.</h2>
+<h2>Full explanation of the algorithm being used in each method and detailed explanation is included.</h2>
 
 <h1>1. Jacobi Iterative Method</h1>
     <p>The Jacobi method is an iterative algorithm to solve a system of linear equations of the form:</p>
@@ -85,13 +85,14 @@ If these conditions are violated, it may turn out to be slowly convergent or eve
         4a  - b   + 3c  + 2d  + 9e = 25
        </pre>
 </div>
-<p>To solve the system the user needs to enter the number of variables, coefficient of the matrix, the constant terms, initial guesses for the variables, the tolerance for convergence, and the maximum number of iterations allowed.</p>
+<p>The user should input the number of variables, coefficient matrix, the constant terms, the initial guess for the variables, the convergence tolerance, and the maximum number of iterations allowable in solving a system.</p>
+<p>The final result for this system using Jacobi iterative method is, a = 1.82191, b = 0.932743, c = 0.179352, d = 0.969527 and e = 1.79638.</p>
 
 <h2>Advantages of the Jacobi Method</h2>
 <ul>
-        <li>Each component of <b>x</b> can be computed independently from the other components, which means that this is a method that can easily be parallelized.
-        <li>Easy to code and analyze.
-        <li>This is a good method for diagonally dominant matrices.
+        <li>Each component of <b>x</b> can be computed independently from the other components, which means that this is a method that can easily be parallelized.</li>
+        <li>Easy to code and analyze.</li>
+        <li>This is a good method for diagonally dominant matrices.</li>
 </ul>
 
 <h2>Disadvantages of the Jacobi Method</h2>
@@ -112,7 +113,7 @@ If these conditions are violated, it may turn out to be slowly convergent or eve
         <li><b>b</b> is the right-hand side vector.</li>
     </ul>
     
-<p>This method is commonly applied to large, sparse systems of equations and is often an improvement over the Jacobi method, as elements of <b>x</b> are updated immediately after computation, typically leading to faster convergence.</p>
+<p>This method is commonly applied for large sparse systems of equations and generally constitutes an improvement compared to the Jacobi method because elements <b>x</b> are updated immediately after computation, which generally leads to faster convergence.</p>
 
 <h2>Key Assumptions for the Gauss-Seidel Method</h2>
     <p>For convergence, the Gauss-Seidel method generally assumes:</p>
@@ -155,6 +156,8 @@ If these conditions are violated, it may turn out to be slowly convergent or eve
        </pre>
 </div>
 
+<p>The final result for this system using Gauss Seidel iterative method is, a = 1.82199, b = 0.932764, c = 0.1794, d = 0.969555 and e = 1.79639.</p>
+
 <h2>Convergence of Gauss-Seidel Method</h2>
     <p>The Gauss-Seidel method typically converges faster than the Jacobi method, especially for systems where:</p>
     <ul>
@@ -179,7 +182,7 @@ If these conditions are violated, it may turn out to be slowly convergent or eve
 
         
 <h1>3. Gaussian Elimination Method</h1>
-Gaussian elimination is a method used to solve systems of linear equations; it converts any given arbitrary system into one whose solution is immediately obvious. It works in two phases: <b>Forward Elimination</b> and <b>Back substitution</b>.
+Gaussian elimination is a method of solution for systems of linear equations, it reduces any given arbitrary system to one whose solution is obviously apparent. It works in two phases: <b>Forward Elimination</b> and <b>Back substitution</b>.
 
 Given a system of equations in matrix form:
 <div class="equation">A * x = b</div>
@@ -191,7 +194,7 @@ where:
 </ul>
 
 <h2>Steps of Gaussian Elimination</h2>
-Gaussian elimination works by transforming the matrix <b>A</b> into an upper triangular matrix, where all elements below the main diagonal are zero. This is accomplished by performing a sequence of row operations.
+Gaussian elimination works by reducing the matrix <b>A</b> into upper triangular form, where all entries that are on and below the main diagonal become zero. This is accomplished by performing a sequence of row operations.
 
 <h2>1. Forward Elimination</h2>
 <p>In the forward elimination phase, we are transforming the matrix to an upper triangular form.</p>
@@ -247,10 +250,10 @@ a<sub>11</sub> x<sub>1</sub> + a<sub>12</sub> x<sub>2</sub> +. + a<sub>1n</sub> 
 </ul>
 
 <h1>4. Gauss-Jordan Elimination Method</h1>
-Gauss-Jordan Elimination is an extended form of Gaussian elimination for the solution of systems of linear equations.So after eliminating the variables above the pivot in the "Gauss-Jordan elimination" we eliminate the variables below each pivot to create a thoroughly simplified matrix from which one can read directly from the matrix.
+Gauss-Jordan Elimination is an extended form of Gaussian elimination for the solution of systems of linear equations. So, after eliminating the variables above the pivot in the "Gauss-Jordan elimination", we eliminate the variables below each pivot to create a thoroughly simplified matrix from which one can read directly from the matrix.
 
 Steps of Gauss-Jordan Elimination
-Gauss-Jordan elimination consists of two major steps: <b>forward elimination</b> and <b>backward elimination</b> in order to have zeros elsewhere in each column that contains a leading entry.
+Gauss-Jordan elimination involves two major steps: <b>forward elimination</b> and <b>backward elimination</b> to have zeros elsewhere in each column containing a leading entry.
 <h2>1. Forward Elimination</h2><br>
 <ul>
     <li><b>Pivoting</b>: Choose a pivot for each column - that is, a non-zero entry in the diagonal. If the entry in the diagonal is zero, then the row is exchanged to make it nonzero. The stability is maintained this way.</li>
@@ -357,6 +360,8 @@ The problem now boils down to solving two triangular systems, which is computati
     <p>2. Solve <i>L * y = b</i> for <i>y</i>.</p>
     <p>3. Substitute <i>y</i> into <i>U * x = y</i> and solve for <i>x</i>.</p>
 
+<p>The final result for the above system using LU Factorization is a = 1.82195, b = 0.932779, c = 0.179378, d = 0.969545 and e = 1.79642.</p>
+
 <h2>Advantages and Limitations</h2>
     <ul>
         <li><b>Advantages</b>: LU factorization is efficient in solving multiple systems with the same matrix <i>A</i>. It also reduces computation time when using matrix inversion methods.</li>
@@ -365,7 +370,7 @@ The problem now boils down to solving two triangular systems, which is computati
 
 
 <h1>6. Bisection Method</h1>
-<p>The Bisection method is a straightforward and stable numerical method for computing the roots of a continuous function. It works especially fine when a function is continuous on a closed interval and the root is guaranteed to exist between two points in that interval. The method makes use of the so-called Intermediate Value Theorem that says: if a function changes the sign over an interval, then it has at least one root in that interval.</p>
+<p>The Bisection method is a straightforward and stable numerical method for computing the roots of a continuous function. It works especially fine when a function is continuous on a closed interval and the root is guaranteed to exist between two points in that interval.The method is based on the so-called Intermediate Value Theorem, which states: if a function changes the sign over an interval then it has at least one root in that interval.</p>
 <h2>Steps of the Bisection Method</h2>
 
 <ol>
@@ -419,7 +424,7 @@ If <i>f(c) ≠ 0</i>, determine for which subinterval(s) to continue:
             </ul>
         </li>
         <li><b>Following Iterations</b>:
-            <p>Continue iterations until the interval is small enough, thereby afetr 13 iterations the final root is 5.74164 .</p>
+            <p>Continue iterations until the interval is small enough, thereby after 13 iterations the final root is 5.74164 .</p>
         </li>
     <h2>Advantages and Limitations</h2>
 
@@ -445,7 +450,7 @@ If <i>f(c) ≠ 0</i>, determine for which subinterval(s) to continue:
 <p>
 The False Position, is a numerical method for finding the roots of a function. It shares features of both the Bisection Method and the Secant Method. It uses two initial guesses, like the Bisection Method, to create an interval; however, as opposed to choosing the midpoint, it uses a linear interpolation in order to estimate the root. This often results in faster convergence than does the Bisection Method. <p>
 
-<p>The method is based on the assumption that the root lies between two points a and b, where f(a) and f(b) have opposite signs. The formula for finding the root is derived from the secant line through the points ((a, f(a)) and ((b, f(b)):<p>
+<p>The method is based on the assumption that the root will lie between two points a and b, where f(a) and f(b) will have opposite signs. The formula for finding the root which is derived from the secant line through the points ((a, f(a)) and ((b, f(b)):<p>
 <div class="equation">
         x<sub>r</sub> = b -
         <frac>f(b)(a - b)</frac> /
@@ -518,7 +523,7 @@ The False Position, is a numerical method for finding the roots of a function. I
         <p>Since <i>f(5) · f(9.14) > 0</i>, we set <i>a = 9.14</i>.</p>
     </li>
     <li><b>Repeat</b>:
-        <p>Take <i>a = 9.14</i> and <i>b = 6</i> for the next iteration and repeat the process until the desired accuracy is achieved.</p>
+        <p>Take <i>a = 9.14</i> and <i>b = 6</i> for the next iteration and repeat the process until the desired accuracy is achieved. Finally after 4 iterations the root is 5.74166 .</p>
     </li>
 </ol>
 
@@ -527,7 +532,7 @@ The False Position, is a numerical method for finding the roots of a function. I
 <ol>
 <li><b>Advantages</b:</li>
             <ul>
-                <li>The False Position Method has much faster convergence than the Bisection Method because it employs a better approximation of the root.
+                <li>The False Position Method has much faster convergence than the Bisection Method because this method employs a better approximation of the root.
                 <li>It is simple to implement and does not require derivative information.</li>
             </ul>
         
@@ -608,7 +613,7 @@ Iterate repeatedly until the absolute difference between successive approximatio
         </ul>
     </li>
     <li><b>Continue Iterating</b>:
-        <p>Repeat this process until the desired accuracy is achieved.</p>
+        <p>Repeat this process until the desired accuracy is achieved. The final root is approximately: 5.74166 .</p>
     </li>
 </ol>
 
@@ -762,6 +767,8 @@ OR check if <i>|f(x<sub>n+1</sub>)| < ε</i>.</p>
         <li><b>Update <i>y</i></b>: Calculate <span class="equation">y = y<sub>0</sub> + (1/6)(k<sub>1</sub> + 2k<sub>2</sub> + 2k<sub>3</sub> + k<sub>4</sub>)</span></li>
         <li><b>Repeat</b>: Update <i>x<sub>0</sub></i> by adding the step size <b>h</b> and set <i>y<sub>0</sub> = y</i>. Repeat steps 2-3 until the desired endpoint <i>x<sub>n</sub></i> is reached.</li>
     </ol>
+
+    
 
 
 
